@@ -1,0 +1,784 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ebay Template</title>
+<style type="text/css">
+/*low resolution, 480px and below*/
+@media only screen and (max-width: 480px) {
+
+body {
+font: 80%/1.4 Arial, Helvetica, sans-serif;
+margin: auto;
+padding: 0;
+color: #333;
+background: none;
+}
+ul, ol, dl {
+padding: 0;
+margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+margin-top: 0;
+padding-right: 15px;
+padding-left: 15px;
+}
+h1 {
+font-family: 'Open Sans', sans-serif;
+font-size:15px; text-align:left;
+}
+h2 {
+font-family: 'Open Sans', sans-serif;
+font-size:18px; color:#017dbe;
+text-align:center;
+}
+a img {
+border: none;
+}
+a:link {
+color:#414958;
+text-decoration: none;
+}
+a:visited {
+color: #4E5869;
+text-decoration: none;
+}
+a:hover, a:active, a:focus {
+text-decoration: none;
+}
+.container {
+width:100%;
+max-width: 480px;
+background-color: #FFF;
+margin: auto;
+padding: 0 20px 0 0;
+}
+header {
+width:100%; height:169px;
+max-width: 480px;
+background-image:url(http://i1373.photobucket.com/albums/ag398/juliofx/Clients/Ebay%20project/header_background_zpsf2ca5c57.jpg);
+margin:0 auto; padding: 0;
+text-align:center;
+background-position:left;
+background-repeat:no-repeat;
+}
+nav {
+width:100%; float: left;
+background-image: -webkit-gradient(
+linear,
+left top,
+left bottom,
+color-stop(0, #2e0347),
+color-stop(0.85, #8d3bc0)
+);
+background-image: -o-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -moz-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -webkit-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -ms-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: linear-gradient(to bottom, #2e0347 0%, #8d3bc0 85%);
+font-family: 'Open Sans', sans-serif;
+font-size:13px; font-weight:400; color:#FFF;
+text-transform:uppercase; text-align:center;
+padding: 15px 0 0 0; margin: -9px 0 0 0;
+}
+#logo {
+display:block; float:left;
+padding-top:15px; padding-left:0px;
+}
+.content {
+width: 100%;
+background-color: #FFF;
+margin: auto;
+float: left;
+padding: 0 0;
+}
+.content ul, .content ol {
+padding: 0 15px 15px 40px;
+}
+.prodInfo_wrap {
+width:96%;
+float:left;
+padding: 10px;
+margin: 10px 0 15px 0;
+font-size: 12px;
+}
+#product_image {
+width: 90%;
+border: 1px solid #F3F3F3;
+margin:0 auto; padding: 1px;
+text-align: center;
+}
+#prodInfo {
+width:97%;
+padding: 0;
+font-size:12px;
+margin: 20px 0 0 0;
+border:0;
+cellpadding:0; cellspacing:5;
+}
+.prodSpecs {
+width:97%; float:left;
+padding: 0;
+margin:0 5px;
+border:0;
+background-color: #F3F3F3; font-family: Arial; font-size: 12px; font-weight:normal; text-align: left; border: none;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+.box_field_left {
+border-bottom:1px solid #FFFFFF; padding: 5px 5px 5px 15px; font-weight:bold;
+}
+.box_field_right {
+border-bottom:1px solid #FFFFFF; border-left:1px solid #FFFFFF; padding: 5px 5px 5px 15px;
+}
+.clearBoth {
+clear:both
+}
+.clearfloat {
+clear:both;
+height:0;
+font-size: 1px;
+line-height: 0px;
+}
+/* ~~ bottom nav ~~ */
+.main {
+width:97%; float:left;
+text-align:center;
+margin: 25px 0;
+padding:5px;
+}
+.tabs input[type=radio] {
+position: absolute;
+top: 350px;
+left: -9999px;
+}
+.tabs {
+list-style: none;
+position: relative;
+padding: 0 auto;
+margin: 0;
+text-align:left;
+}
+.tabs li {
+float: left;
+margin: 0;
+padding:0;
+}
+.tabs label {
+display: block; float:left;
+padding: 10px 10px;
+border-radius: 2px 2px 0 0;
+color: #8d3bc0;
+font-size: 13px;
+font-weight: normal;
+font-family: 'Open Sans', sans-serif;
+background: #FFF;
+cursor: pointer;
+position: relative;
+top: 3px;
+left:0;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.tabs label:hover {
+background:#F7F7F7;
+top: 0;
+}
+[id^=tab]:checked + label {
+background: #8d3bc0;
+color: white;
+top: 0;
+}
+[id^=tab]:checked ~ [id^=tab-content] {
+display: block;
+}
+.tab-content{
+z-index: 2;
+display: none;
+text-align: left;
+font-size: 13px;
+line-height: 140%;
+background: #F7F7F7;
+padding: 25px;
+border-radius: 0 0 4px 4px;
+color: black;
+position: absolute;
+top: 74px;
+left: 0;
+box-sizing: content-box;
+-webkit-animation-duration: 0.5s;
+-o-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+} /*Ends Low resolution */
+/*medium resolution, 481px to 1023 */
+@media only screen and (min-width: 481px) {
+
+body {
+font: 100%/1.4 Arial, Helvetica, sans-serif;
+margin: auto;
+padding: 0;
+color: #333;
+background: none;
+}
+ul, ol, dl {
+padding: 0;
+margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+margin-top: 0;
+padding-right: 15px;
+padding-left: 15px;
+}
+h1 {
+font-family: 'Open Sans', sans-serif;
+font-size:18px; text-align:left;
+}
+h2 {
+font-family: 'Open Sans', sans-serif;
+font-size:18px; color:#017dbe;
+text-align:center;
+}
+a img {
+border: none;
+}
+a:link {
+color:#414958;
+text-decoration: none;
+}
+a:visited {
+color: #4E5869;
+text-decoration: none;
+}
+a:hover, a:active, a:focus {
+text-decoration: none;
+}
+.container {
+width:100%;
+max-width: 768px;
+background-color: #FFF;
+margin: auto;
+}
+header {
+width:100%;
+max-width: 768px;
+background-image:url(http://i1373.photobucket.com/albums/ag398/juliofx/Clients/Ebay%20project/header_background_zpsf2ca5c57.jpg);
+background-position: 895px;
+background-repeat: repeat-x;
+margin:auto; margin-bottom:-23px;
+height:169px;
+}
+nav {
+width:100%; float: left;
+background-image: -webkit-gradient(
+linear,
+left top,
+left bottom,
+color-stop(0, #2e0347),
+color-stop(0.85, #8d3bc0)
+);
+background-image: -o-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -moz-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -webkit-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -ms-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: linear-gradient(to bottom, #2e0347 0%, #8d3bc0 85%);
+font-family: 'Open Sans', sans-serif;
+font-size:13px; font-weight:400; color:#FFF;
+text-transform:uppercase; text-align:center;
+padding: 15px 0 0 0;
+margin:0; border:0;
+}
+#logo {
+width:28%;
+display: block; float: left;
+padding-top: 27px; padding-left: 7px;"
+}
+.content {
+width: 100%;
+background-color: #FFF;
+margin: auto;
+float: left;
+padding: 0 0;
+}
+.content ul, .content ol {
+padding: 0 15px 15px 40px;
+}
+.prodInfo_wrap {
+width:100%;
+float:left;
+padding: 10px;
+margin: 15px 0 30px;
+font-size: 12px;
+}
+#product_image {
+width: 40%;
+float: left;
+border: 1px solid #F3F3F3;
+padding: 1px;
+text-align: center;
+}
+#prodInfo {
+width:55%; float:left;
+padding: 0;
+font-size:12px;
+margin: 0 0 0 0;
+border:0;
+cellpadding:0; cellspacing:5;
+}
+.prodSpecs {
+width:97%; float:left;
+padding: 0;
+margin: 10px 0 0 10px;
+border:0;
+background-color: #F3F3F3; font-family: Arial; font-size: 12px; font-weight:normal; text-align: left; border: none;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+.box_field_left {
+border-bottom:1px solid #FFFFFF; padding-left:20px; font-weight:bold;
+}
+.box_field_right {
+border-bottom:1px solid #FFFFFF; border-left:1px solid #FFFFFF; padding-left:20px;
+}
+/* ~~ bottom nav ~~ */
+.main {
+width:97%; float:left;
+text-align:center;
+margin: 35px 0;
+padding:10px;
+}
+.tabs input[type=radio] {
+position: absolute;
+top: 350px;
+left: -9999px;
+}
+.tabs {
+list-style: none;
+position: relative;
+padding: 0;
+margin: 0;
+text-align:left;
+}
+.tabs li {
+float: left;
+margin: 0;
+padding:0;
+}
+.tabs label {
+display: block; float:left;
+padding: 10px 25px;
+border-radius: 2px 2px 0 0;
+color: #8d3bc0;
+font-size: 15px;
+font-weight: normal;
+font-family: 'Open Sans', sans-serif;
+background: #FFF;
+cursor: pointer;
+position: relative;
+top: 3px;
+left:0;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.tabs label:hover {
+background:#F7F7F7;
+top: 0;
+}
+[id^=tab]:checked + label {
+background: #8d3bc0;
+color: white;
+top: 0;
+}
+[id^=tab]:checked ~ [id^=tab-content] {
+display: block;
+}
+.tab-content{
+z-index: 2;
+display: none;
+text-align: left;
+font-size: 13px;
+line-height: 140%;
+background: #F7F7F7;
+padding: 25px;
+border-radius: 0 0 4px 4px;
+color: black;
+position: absolute;
+top: 42px;
+left: 0;
+box-sizing: content-box;
+-webkit-animation-duration: 0.5s;
+-o-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+}
+/*high resolution, 1024px and above*/
+@media only screen and (min-width: 1024px) {
+body {
+font: 100%/1.4 Arial, Helvetica, sans-serif;
+margin: auto;
+padding: 0;
+color: #333;
+background: none;
+}
+ul, ol, dl {
+padding: 0;
+margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+margin-top: 0;
+padding-right: 15px;
+padding-left: 15px;
+}
+h1 {
+font-family: 'Open Sans', sans-serif;
+font-size:18px; text-align:left;
+}
+h2 {
+font-family: 'Open Sans', sans-serif;
+font-size:18px; color:#8d3bc0;
+text-align:center;
+}
+a img {
+border: none;
+}
+a:link {
+color:#414958;
+text-decoration: none;
+}
+a:visited {
+color: #4E5869;
+text-decoration: none;
+}
+a:hover, a:active, a:focus {
+text-decoration: none;
+}
+.container {
+width:80%; height:auto;
+max-width: 1066px;
+background-color: #FFF;
+margin: auto;
+border-left: 1px solid #CCC;
+}
+header {
+width:80%;
+max-width: 1066px;
+margin:auto;
+margin-bottom:-6px;
+background-image:url(http://i1373.photobucket.com/albums/ag398/juliofx/Clients/Ebay%20project/header_background_zps3b3049ca.jpg);
+background-position:right;
+background-size:100%;
+background-repeat:no-repeat;
+border: 0 none;
+
+}
+nav {
+width:100%; max-width:1066px;
+border: none;
+background-image: -webkit-gradient(
+linear,
+left top,
+left bottom,
+color-stop(0, #2e0347),
+color-stop(0.85, #8d3bc0)
+);
+background-image: -o-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -moz-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -webkit-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: -ms-linear-gradient(bottom, #2e0347 0%, #8d3bc0 85%);
+background-image: linear-gradient(to bottom, #2e0347 0%, #8d3bc0 85%);
+font-family: 'Open Sans', sans-serif;
+font-size:13px; font-weight:400; color:#FFF;
+text-transform:uppercase; text-align:center;
+padding: 15px 0 0 0;
+}
+#logo {
+width:23%;
+display:block; float:left;
+padding:15px 0 5px 0px;
+}
+.content {
+width: 100%;
+background-color: #FFF;
+margin: auto;
+float: left;
+padding: 0 0;
+}
+.content ul, .content ol {
+padding: 0 15px 15px 40px;
+}
+#product_image {
+width: 35%;
+float: left;
+border: 1px solid #F3F3F3;
+padding: 1px;
+text-align: center;
+}
+.prodInfo_wrap {
+width:96%;
+float:left;
+padding: 20px 0 0 10px;
+margin: 15px 0 30px 10px;
+font-size: 12px;
+}
+#prodInfo {
+width:60%; float:left;
+padding: 15px;
+font-size:12px;
+margin: 0 0 0 0;
+border:0;
+cellpadding:0; cellspacing:5;
+}
+.prodSpecs {
+width:96%; float:left;
+padding: 0;
+margin: 10px 0 0 20px;
+border:0;
+background-color: #F3F3F3; font-family: Arial; font-size: 12px; font-weight:normal; text-align: left; border: none;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+.box_field_left {
+border-bottom:1px solid #FFFFFF; padding-left:50px; font-weight:bold;
+}
+.box_field_right {
+border-bottom:1px solid #FFFFFF; border-left:1px solid #FFFFFF; padding-left:25px;
+}
+.clearBoth {
+clear:both
+}
+.clearfloat {
+clear:both;
+height:0;
+font-size: 1px;
+line-height: 0px;
+}
+/* ~~ bottom nav ~~ */
+.main {
+width:96%; float:left;
+text-align:center;
+margin: 35px 10px; 0 0;
+padding:10px;
+}
+.tabs input[type=radio] {
+position: absolute;
+top: 350px;
+left: -9999px;
+}
+.tabs {
+list-style: none;
+position: relative;
+padding: 0 auto;
+margin: 0;
+text-align:left;
+}
+.tabs li {
+float: left;
+margin: 0;
+padding:0;
+}
+.tabs label {
+display: block; float:left;
+padding: 10px 63px;
+border-radius: 2px 2px 0 0;
+color: #8d3bc0;
+font-size: 20px;
+font-weight: normal;
+font-family: 'Open Sans', sans-serif;
+background: #FFF;
+cursor: pointer;
+position: relative;
+top: 3px;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.tabs label:hover {
+background:#F7F7F7;
+top: 0;
+}
+[id^=tab]:checked + label {
+background: #8d3bc0;
+color: white;
+top: 0;
+}
+[id^=tab]:checked ~ [id^=tab-content] {
+display: block;
+}
+.tab-content{
+z-index: 2;
+display: none;
+text-align: left;
+font-size: 15px;
+line-height: 140%;
+background: #F7F7F7;
+padding: 35px;
+border-radius: 0 0 4px 4px;
+color: black;
+position: absolute;
+top: 53px;
+left: 0;
+box-sizing: content-box;
+-webkit-animation-duration: 0.5s;
+-o-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+</style>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+
+<div id="logo">
+
+<a href="#" target="_blank"><img src="http://i1373.photobucket.com/albums/ag398/juliofx/Clients/Ebay%20project/template_logo_zpsf63a4aa0.png" border="0" alt="Welcome to Our Store" id="logo" style="max-width:100%; min-width:317px; height:auto;"></a>
+
+</div>
+
+
+</header><!-- end .header -->
+
+
+<div class="container">
+
+<nav>
+<p>Welcome to our ebay store!</p>
+<!--<ul class="menu" style="margin-left:300px;">
+<a href="http://www.ebay.com" target="_self">Accessories</a>
+</ul>
+<ul class="menu">
+<a href="http://www.ebay.com" target="_self">Parts</a>
+</ul>
+<ul class="menu">
+<a href="http://www.ebay.com" target="_self">Motors</a>
+</ul>
+<ul class="menu">
+<a href="http://www.ebay.com" target="_self">Others</a>
+</ul>-->
+
+</nav>
+<!-- end nav -->
+
+
+<div class="content">
+
+<div class="prodInfo_wrap">
+
+<div id="product_image">
+<a href="#" target="_blank"><img vbname="Picture" vbtype="PictureField" imagenumber="0" vhidden="True" src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/HDcAAOSwNSxVSSBa/$_12.JPG?set_id=880000500F
+" border="0" alt="" style="max-width:100%; min-width:50%; height:auto;"></a>
+</div>
+
+<table id="prodInfo">
+<tr>
+<th scope="col"><h1><span vbtype="PropertiesFile" vbname="Title" vbdescription="Item Description:" vhidden="False">12000-ZW1-L00ZA Block Assy., Cylinder, 2004 Honda 75HP (XL) M#BF75A</span></h1></th>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><p>Item#: <span vbtype="vbRow" vbname="InternalID" vhidden="True">A15050041</span>,<br>
+<span vbtype="PropertiesFile" vbname="description" vbdescription="Description" vhidden="False">Block Assy., Cylinder</span>, Model: <span vhidden="False" vbdescription="Model" vbname="modelnumber" vbtype="PropertiesFile">2004 Honda 75HP (XL) M#BF75A</span>,</br>
+Part Number: <span vhidden="False" vbdescription="Part Number" vbname="partnumber" vbtype="PropertiesFile">12000-ZW1-L00ZA</span></p>
+<p>QUICK OVERVIEW<br>
+<span vbtype="PropertiesFile" vbname="Title" vbdescription="Item Description:" vhidden="False">12000-ZW1-L00ZA Block Assy., Cylinder, 2004 Honda 75HP (XL) M#BF75A</span></p></td>
+</tr>
+</table>
+</div>
+
+<h2>Product Specifications:</h2>
+<!--<div class="content">-->
+
+<table class="prodSpecs" cellspacing="0" cellpadding="0">
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Description</td>
+
+<td class="box_field_right"><span vbtype="PropertiesFile" vbname="description" vbdescription="Description" vhidden="False">Block Assy., Cylinder</span></td>
+</tr>
+<tr>
+<!--<td height="1" colspan="3" style="background-color:#fff;">&nbsp;</td>-->
+</tr>
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Part Number/UPC</td>
+<td class="box_field_right"><span vhidden="False" vbdescription="Part Number/UPC" vbname="partnumber" vbtype="PropertiesFile">12000-ZW1-L00ZA</span></td>
+</tr>
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Model</td>
+<td class="box_field_right"><span vhidden="False" vbdescription="Model" vbname="modelnumber" vbtype="PropertiesFile">2004 Honda 75HP (XL) M#BF75A</span></td>
+</tr>
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Condition
+Description</td>
+<td class="box_field_right"><span vbtype="PropertiesFile" vbname="ConditionDescription" vbdescription="Condition Description" vhidden="False" style="color:maroon">Working Part/No Scoring in Cylinder Piston Walls/ Light Rust in Cylinder Piston Walls/Hardware Included/No Cracks in Block</span></td>
+</tr>
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Details</td>
+<td class="box_field_right"><span vbtype="PropertiesFile" vbname="Details" vbdescription="Details" vhidden="False">More Details Upon Request.</span></td>
+</tr>
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Package Details</td>
+<td height="60" class="box_field_right">Weight: <span vbtype="vbRow" vbname="WeightPounds" vhidden="True">52</span>lb, <span vbtype="vbRow" vbname="WeightOunces" vhidden="True">2</span>oz.<br>Dimensions: <span vbtype="vbRow" vbname="DimensionL" vhidden="True">27</span>in. X <span vbtype="vbRow" vbname="DimensionW" vhidden="True">19</span>in. X <span vbtype="vbRow" vbname="DimensionH" vhidden="True">19</span>in.</td>
+</tr>
+<tr>
+<td height="40" class="box_field_left" style="width: 155px">Locations</td>
+<td height="60" class="box_field_right"><span vbtype="vbRow" vbname="Locations" vhidden="True">R1</span> ID: <span vbtype="vbRow" vbname="Job" vhidden="True">A15050041</span></td>
+</tr>
+</table>
+
+
+<!-- end .content --></div>
+
+<div class="content" style="height:480px;">
+
+<div class="main">
+<ul class="tabs">
+<li>
+<input type="radio" checked="" name="tabs" id="tab1">
+<label for="tab1">Shipping</label>
+<div id="tab-content1" class="tab-content animated fadeIn">
+Please look in the shipping and payments tab in the listing for details, If shipping is available We will ship the item within the handling time specified there. You should expect your item to arrive close to the time frame provided by eBay in the shipping tab. For international shipments time frame changes due to customs, in some cases takes additional time to deliver them or they get held at your local post office until customs charges and import duties are paid by you, I hope you can understand and please be patient. If you are not satisfied with your item please contact us immediately so We can resolve your issue. Please attach your Ebay Auction Number to the message, you can find it at the right of the listing where it says "Other Item Info". CA sales tax's applies for CA deliveries. We ship mostly USPS or UPS and Items may be shipped outside their factory packaging to fit the boxes.<br><br>
+
+<p>Please note that if you are outside the US the shipping charges do not include import duties. Thanks for your interest and your consideration.<br>
+</div>
+</li>
+<li>
+<input type="radio" name="tabs" id="tab2">
+<label for="tab2">Payment</label>
+<div id="tab-content2" class="tab-content animated fadeIn">
+We accept only PayPal at this time, If you are having any issues or you have questions about combining payments or combining orders, feel free to contact me thru the eBay messages or request a combined invoice "after you commit to buy all the items but before you pay".
+</div>
+</li>
+<li>
+<input type="radio" name="tabs" id="tab3">
+<label for="tab3">Return Policy</label>
+<div id="tab-content3" class="tab-content animated fadeIn">
+If you need to return the item please contact me and I will send you the return address, You do not need an authorization number but please put the paperwork in the box so We can track the sale.
+</div>
+</li>
+<li>
+<input type="radio" name="tabs" id="tab4">
+<label for="tab4">Contact Us</label>
+<div id="tab-content4" class="tab-content animated fadeIn">
+We are small business located in Sacramento California, you can reach us thu eBay messages and We will answer within 24h.
+</div>
+</li>
+</ul>
+</div>
+
+
+</div><!-- end .content -->
+
+
+<!-- end .container --></div>
+
+</body>
+</html>
